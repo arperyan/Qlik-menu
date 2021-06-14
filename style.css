@@ -1,0 +1,230 @@
+/* Styling the icon and menu */
+.qv-object-Menu .qv-menu-overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1030;
+  right: 0;
+  box-shadow: -7px 0px 20px rgb(0 0 0 / 20%);
+  top: 131px;
+  background-color: #1d262c;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.qv-object-Menu .qv-menu-overlay-content {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  height: 70.5%;
+  overflow: auto;
+}
+.qv-object-Menu .qv-menu-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.7rem;
+  align-items: flex-end;
+  /* padding: 4rem 2rem 1.2rem; */
+  height: max(6.9rem, 11.9%);
+  padding: 0 2rem;
+  border-bottom: 2px solid #db0011;
+  background: #31404a;
+}
+
+.qv-object-Menu .qv-menu-title {
+  color: #fdfdfd;
+  font-size: 1.4rem;
+  display: flex;
+  padding-bottom: 1.4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.qv-object-Menu .qv-menu-add-filter {
+  font-size: 1rem;
+  color: #fdfdfd;
+  display: flex;
+  align-self: center;
+}
+
+.qv-object-Menu .qv-menu-overlay a:hover,
+.qv-object-Menu .qv-menu-overlay a:focus {
+  color: #fdfdfd;
+}
+
+.qv-object-Menu .qv-menu-overlay .qv-menu-closebtn {
+  padding: 0 8px;
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: #929292;
+  padding-bottom: 1.3rem;
+  /* transition: 0.3s; */
+}
+
+.qv-object-Menu .qv-menu-filterpane-container:first-child {
+  padding-top: 1px;
+}
+
+.qv-object-Menu .qv-menu-filterpane-container {
+  padding: 0 1.7rem 1.7rem;
+  height: 35px;
+  /* width: 100%; */
+  /* background-color: #31404a; */
+  /* overflow: hidden; */
+  /* transition: 0.4s; */
+}
+
+.qv-object-Menu .qv-menu-filterpane {
+  height: inherit;
+}
+
+.qv-object-Menu #qv-menu-icon-filter {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-height: 450px) {
+  .qv-object-Menu .qv-menu-overlay a {
+    font-size: 20px;
+  }
+  .qv-object-Menu .qv-menu-overlay .qv-menu-closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+  .qv-object-Menu .qv-menu-title {
+    font-size: 1rem;
+  }
+}
+
+/*---------------Spinner -----------------------------------*/
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.qv-object-Menu .spinner-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #1d262c;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.qv-object-Menu .spinner-container {
+  display: inline-block;
+  display: flex;
+  align-self: center;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(146, 146, 146, 0.6);
+  border-radius: 50%;
+  border-top-color: #d7d8d6;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+/* .qv-object-Menu .menu-container {
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0 2rem;
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  background: #31404a;
+}
+.qv-object-Menu .menu-container::-webkit-scrollbar {
+  width: 10px;
+}
+.qv-object-Menu .menu-container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.qv-object-Menu .menu-container::-webkit-scrollbar-thumb {
+  background-color: #b3b3b3;
+  border-radius: 10px;
+} */
+
+/* .qv-object-Menu .panel.show {
+  height: clamp(300px, 20rem, 500px) !important;
+}
+
+.qv-object-Menu svg {
+  transition: transform 0.2s ease-in;
+  padding-right: 5px;
+}
+.qv-object-Menu [aria-expanded="true"] svg {
+  transform: rotate(0.25turn);
+}
+.qv-object-Menu .ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  text-align: justify;
+}
+.qv-object-Menu .ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(
+    circle,
+    rgb(85, 84, 84) 10%,
+    transparent 10.01%
+  );
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 0.5s, opacity 1s;
+}
+.qv-object-Menu .ripple:active:after {
+  transform: scale(0, 0);
+  opacity: 0.3;
+  transition: 0s;
+} */
+
+/* .qv-object-Menu .accordion {
+  cursor: pointer;
+  padding: 1.3em;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+
+  background: none;
+  color: #677b88;
+}
+
+.item__container {
+  border-bottom: 1px solid #677b88;
+}
+
+.item__container:last-child {
+  border-bottom: none;
+}
+
+.qv-object-Menu .active,
+.item__container:hover {
+  background-color: #253038;
+} */
+
+/* .qv-object-Menu .overlay-content {
+  position: relative;
+  top: 8%;
+} */
